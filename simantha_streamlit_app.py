@@ -88,7 +88,7 @@ set_page_container_style(
 
 
 
-image = Image.open('Simantha_App_Logo.png')
+image = Image.open('simantha_app_logo.png')
 
 st.image(image, use_column_width=True)
 
