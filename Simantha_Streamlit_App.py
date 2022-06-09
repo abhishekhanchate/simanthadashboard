@@ -34,7 +34,6 @@ import pandas as pd
 import numpy as np
 import plotly.express as px # pip install plotly == 5.2.2            
 import plotly.graph_objs as go
-import random
 from simantha import Source, Machine, Buffer, Sink, Maintainer, System, utils
 import streamlit as st
 from PIL import Image
