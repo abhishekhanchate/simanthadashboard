@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run Simantha_Streamlit_App.py
+web: sh setup.sh && streamlit run simantha_streamlit_app.py
