@@ -180,7 +180,7 @@ maintainer = Maintainer(capacity=int(df['Maintainer Capacity (in units)']))
     
 system = System(objects=objects, maintainer=maintainer)
     
-random.seed(1)
+#random.seed(1)
 system.simulate(simulation_time=utils.WEEK)
     
     
