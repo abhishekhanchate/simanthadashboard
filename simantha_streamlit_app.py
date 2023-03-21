@@ -113,7 +113,7 @@ def user_input_features():
             'Buffer Capacity (in units)': Buffer_cap,
             'Maintainer Capacity (in units)': Maintainer_cap}
     features = pd.DataFrame(data, index=[0])
-    return print(tabulate(features, headers = 'keys', tablefmt = 'fancy_grid'))
+    return features # print(tabulate(features, headers = 'keys', tablefmt = 'fancy_grid'))
 
 df = user_input_features()
 
