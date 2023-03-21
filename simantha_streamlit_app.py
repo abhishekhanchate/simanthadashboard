@@ -183,10 +183,7 @@ system = System(objects=objects, maintainer=maintainer)
 #random.seed(1)
 system.simulate(simulation_time=utils.WEEK)
     
-    
-  
-    
-  
+
 M1_prod_df = pd.DataFrame(M1.production_data)
 M1_prod_df['Machine'] = "Machine1"                               # Adding Machine ID
 M1_prod_df = M1_prod_df.iloc[1: , :]                       # Dropping 0, 0 Row
@@ -273,7 +270,7 @@ fig_strip.update_yaxes(
         title_standoff = 25,
         tickfont=dict(size=18),
         showline=True, linewidth=4, linecolor='black', mirror=True)
-fig_strip.update_traces(line_color='green')
+fig_strip.update_traces(line_color='green', paper_bgcolor: rgba(0, 0, 0, 0))
 # fig_strip.update_traces(line=dict(color="Maroon", width=2))  
 st.plotly_chart(fig_strip, use_container_width=True)
 st.write('---')
