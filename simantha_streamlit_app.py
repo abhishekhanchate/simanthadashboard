@@ -278,7 +278,18 @@ st.plotly_chart(fig_strip, use_container_width=True)
 st.write('---')
 
 df_line = df1[df1["Machine"]==mc_option]
-fig_line = px.line(df_line, x="time", y="prod_rate", width=800, height=500)
+fig_line = px.line(df_line, x="time", y="prod_rate", width=800, height=500,     color_discrete_sequence=[
+        "#0068c9",
+        "#83c9ff",
+        "#ff2b2b",
+        "#ffabab",
+        "#29b09d",
+        "#7defa1",
+        "#ff8700",
+        "#ffd16a",
+        "#6d3fc0",
+        "#d5dae5",
+    ])
 fig_line.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
         title_font = dict(size = 22, color='blue'),
