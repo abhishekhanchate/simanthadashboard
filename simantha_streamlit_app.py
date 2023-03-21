@@ -106,9 +106,9 @@ st.write('---')
 st.sidebar.header('Specify Input Parameters')
 
 def user_input_features():
-    Cycle_time = st.sidebar.slider('Cycle Time (in min)', 0, 100, 10)
-    Buffer_cap = st.sidebar.slider('Buffer Capacity (in units)', 0, 1000, 100)
-    Maintainer_cap = st.sidebar.slider('Maintainer Capacity (in units)', 0, 25, 5)
+    Cycle_time = st.sidebar.slider('Cycle Time (min)', 0, 100, 10)
+    Buffer_cap = st.sidebar.slider('Buffer Capacity (units)', 0, 10, 1)
+    Maintainer_cap = st.sidebar.slider('Maintainer Capacity (units)', 0, 10, 1)
     data = {'Cycle Time (min)': Cycle_time,
             'Buffer Capacity (units)': Buffer_cap,
             'Maintainer Capacity (units)': Maintainer_cap}
