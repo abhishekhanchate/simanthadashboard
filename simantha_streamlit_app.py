@@ -259,18 +259,19 @@ print(df3[:5])
 
 df_strip = df3[df3["Machine"]==mc_option]
 fig_strip = px.line(df_strip, x = 'time', y = 'health', width=800, height=500)
+pio.templates.default = "plotly"
 fig_strip.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
         title_font = dict(size = 22, color='black'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=3, linecolor='black', mirror=True)
+        showline=True, linewidth=3)#, linecolor='black', mirror=True)
 fig_strip.update_yaxes(
         title_text = "<b>Health Index</b>",
         title_font = dict(size = 22, color='black'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=4, linecolor='black', mirror=True)
+        showline=True, linewidth=4)#, linecolor='black', mirror=True)
 fig_strip.update_traces(line_color='green')
 # fig_strip.update_traces(line=dict(color="Maroon", width=2))  
 st.plotly_chart(fig_strip, use_container_width=True)
