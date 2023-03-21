@@ -258,7 +258,7 @@ print(df3[:5])
 
 
 df_strip = df3[df3["Machine"]==mc_option]
-fig_strip = px.line(df_strip, x = 'time', y = 'health', width=800, height=500, color="day")
+fig_strip = px.line(df_strip, x = 'time', y = 'health', width=800, height=500)
 #pio.templates.default = "plotly"
 fig_strip.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
@@ -278,7 +278,7 @@ st.plotly_chart(fig_strip, use_container_width=True)
 st.write('---')
 
 df_line = df1[df1["Machine"]==mc_option]
-fig_line = px.line(df_line, x="time", y="prod_rate", width=800, height=500, color="day")
+fig_line = px.line(df_line, x="time", y="prod_rate", width=800, height=500)
 fig_line.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
         title_font = dict(size = 22, color='blue'),
