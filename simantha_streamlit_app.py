@@ -41,8 +41,8 @@ import altair as alt
 import plotly.io as pio
 pio.templates.default = "plotly"
 
-BACKGROUND_COLOR = 'black' # 'black'
-COLOR = 'white' # 'white'
+BACKGROUND_COLOR = 'white' # 'black'
+COLOR = 'black' # 'white'
 
 def set_page_container_style(
         max_width: int = 1100, max_width_100_percent: bool = False,
@@ -273,7 +273,7 @@ fig_strip.update_yaxes(
         tickfont=dict(size=18),
         showline=True, linewidth=4, linecolor='blue', mirror=True)
 fig_strip.update_traces(line_color='green')
-fig_strip.update_layout(paper_bgcolor="rgb(10,10,10)", plot_bgcolor="rgb(10,10,10)")
+fig_strip.update_layout(paper_bgcolor="rgb(255,255,255)", plot_bgcolor="rgb(255,255,255)")
 # fig_strip.update_traces(line=dict(color="Maroon", width=2))  
 st.plotly_chart(fig_strip, use_container_width=True)
 st.write('---')
