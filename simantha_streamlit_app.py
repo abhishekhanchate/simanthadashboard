@@ -40,8 +40,8 @@ from PIL import Image
 import altair as alt
 
 
-BACKGROUND_COLOR = 'black'
-COLOR = 'white'
+BACKGROUND_COLOR = 'white' # 'black'
+COLOR = 'black' # 'white'
 
 def set_page_container_style(
         max_width: int = 1100, max_width_100_percent: bool = False,
