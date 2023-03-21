@@ -270,7 +270,7 @@ fig_strip.update_yaxes(
         title_standoff = 25,
         tickfont=dict(size=18),
         showline=True, linewidth=4, linecolor='black', mirror=True)
-fig_strip.update_traces({line_color='green', paper_bgcolor: rgba(0, 0, 0, 0)})
+fig_strip.update_traces(line_color='green', paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
 # fig_strip.update_traces(line=dict(color="Maroon", width=2))  
 st.plotly_chart(fig_strip, use_container_width=True)
 st.write('---')
@@ -289,7 +289,7 @@ fig_line.update_yaxes(
         title_standoff = 25,
         tickfont=dict(size=18),
         showline=True, linewidth=4, linecolor='black', mirror=True)
-fig_strip.update_traces(line_color='red')
+fig_strip.update_traces(line_color='red', paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
 #fig_line.update_traces(line=dict(color="Maroon", width=2))
 st.plotly_chart(fig_line, use_container_width=True)
     
