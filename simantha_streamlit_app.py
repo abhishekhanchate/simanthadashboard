@@ -107,11 +107,11 @@ st.sidebar.header('Specify Input Parameters')
 
 def user_input_features():
     Cycle_time = st.sidebar.slider('Cycle Time (in min)', 0, 100, 10)
-    Buffer_cap = st.sidebar.slider('Buffer Capacity (in units)', 0, 10, 3)
-    Maintainer_cap = st.sidebar.slider('Maintainer Capacity (in units)', 0, 10, 3)
-    data = {'Cycle Time (in min)': Cycle_time,
-            'Buffer Capacity (in units)': Buffer_cap,
-            'Maintainer Capacity (in units)': Maintainer_cap}
+    Buffer_cap = st.sidebar.slider('Buffer Capacity (in units)', 0, 1000, 100)
+    Maintainer_cap = st.sidebar.slider('Maintainer Capacity (in units)', 0, 25, 5)
+    data = {'Cycle Time (min)': Cycle_time,
+            'Buffer Capacity (units)': Buffer_cap,
+            'Maintainer Capacity (units)': Maintainer_cap}
     features = pd.DataFrame(data, index=[0])
     return features # print(tabulate(features, headers = 'keys', tablefmt = 'fancy_grid'))
 
