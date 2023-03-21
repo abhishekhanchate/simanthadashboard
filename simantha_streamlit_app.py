@@ -38,7 +38,8 @@ from simantha import Source, Machine, Buffer, Sink, Maintainer, System, utils
 import streamlit as st
 from PIL import Image
 import altair as alt
-
+import plotly.io as pio
+pio.templates.default = "plotly"
 
 BACKGROUND_COLOR = 'white' # 'black'
 COLOR = 'black' # 'white'
