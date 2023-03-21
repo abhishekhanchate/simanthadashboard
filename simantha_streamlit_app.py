@@ -76,7 +76,7 @@ def set_page_container_style(
         
 
 st.set_page_config(
-    page_title='My App',
+    page_title='Simantha Dashboard',
     layout='wide',
     page_icon=':rocket:'
 )
@@ -262,16 +262,16 @@ df_strip = df3[df3["Machine"]==mc_option]
 fig_strip = px.line(df_strip, x = 'time', y = 'health', width=800, height=500)
 fig_strip.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
-        title_font = dict(size = 22, color='white'),
+        title_font = dict(size = 22, color='black'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=3, linecolor='white', mirror=True)
+        showline=True, linewidth=3, linecolor='black', mirror=True)
 fig_strip.update_yaxes(
         title_text = "<b>Health Index</b>",
-        title_font = dict(size = 22, color='white'),
+        title_font = dict(size = 22, color='black'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=4, linecolor='white', mirror=True)
+        showline=True, linewidth=4, linecolor='black', mirror=True)
 fig_strip.update_traces(line_color='green')
 # fig_strip.update_traces(line=dict(color="Maroon", width=2))  
 st.plotly_chart(fig_strip, use_container_width=True)
@@ -281,17 +281,17 @@ df_line = df1[df1["Machine"]==mc_option]
 fig_line = px.line(df_line, x="time", y="prod_rate", width=800, height=500)
 fig_line.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
-        title_font = dict(size = 22, color='white'),
+        title_font = dict(size = 22, color='black'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=3, linecolor='white', mirror=True)
+        showline=True, linewidth=3, linecolor='black', mirror=True)
 fig_line.update_yaxes(
         title_text = "<b>Production Rate (Units of Part/Minute) </b>",
-        title_font = dict(size = 22, color='white'),
+        title_font = dict(size = 22, color='black'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=4, linecolor='white', mirror=True)
-fig_strip.update_traces(line_color='green')
+        showline=True, linewidth=4, linecolor='black', mirror=True)
+fig_strip.update_traces(line_color='red')
 #fig_line.update_traces(line=dict(color="Maroon", width=2))
 st.plotly_chart(fig_line, use_container_width=True)
     
