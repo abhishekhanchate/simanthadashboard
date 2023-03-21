@@ -41,8 +41,8 @@ import altair as alt
 import plotly.io as pio
 pio.templates.default = "plotly"
 
-BACKGROUND_COLOR = 'white' # 'black'
-COLOR = 'black' # 'white'
+BACKGROUND_COLOR = 'black' # 'black'
+COLOR = 'white' # 'white'
 
 def set_page_container_style(
         max_width: int = 1100, max_width_100_percent: bool = False,
