@@ -258,8 +258,19 @@ print(df3[:5])
 
 
 df_strip = df3[df3["Machine"]==mc_option]
-fig_strip = px.line(df_strip, x = 'time', y = 'health', width=800, height=500)
-pio.templates.default = "plotly"
+fig_strip = px.line(df_strip, x = 'time', y = 'health', width=800, height=500, color="day", color_discrete_sequence=[
+        "#0068c9",
+        "#83c9ff",
+        "#ff2b2b",
+        "#ffabab",
+        "#29b09d",
+        "#7defa1",
+        "#ff8700",
+        "#ffd16a",
+        "#6d3fc0",
+        "#d5dae5",
+    ])
+#pio.templates.default = "plotly"
 fig_strip.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
         title_font = dict(size = 22, color='blue'),
@@ -278,7 +289,7 @@ st.plotly_chart(fig_strip, use_container_width=True)
 st.write('---')
 
 df_line = df1[df1["Machine"]==mc_option]
-fig_line = px.line(df_line, x="time", y="prod_rate", width=800, height=500,     color_discrete_sequence=[
+fig_line = px.line(df_line, x="time", y="prod_rate", width=800, height=500, color="day", color_discrete_sequence=[
         "#0068c9",
         "#83c9ff",
         "#ff2b2b",
