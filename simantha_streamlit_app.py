@@ -262,16 +262,16 @@ fig_strip = px.line(df_strip, x = 'time', y = 'health', width=800, height=500)
 pio.templates.default = "plotly"
 fig_strip.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
-        title_font = dict(size = 22, color='black'),
+        title_font = dict(size = 22, color='blue'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=3, linecolor='black', mirror=True, minor_gridcolor='grey')
+        showline=True, linewidth=3, linecolor='blue', mirror=True)
 fig_strip.update_yaxes(
         title_text = "<b>Health Index</b>",
-        title_font = dict(size = 22, color='black'),
+        title_font = dict(size = 22, color='blue'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=4)#, linecolor='black', mirror=True)
+        showline=True, linewidth=4, linecolor='blue', mirror=True)
 fig_strip.update_traces(line_color='green')
 # fig_strip.update_traces(line=dict(color="Maroon", width=2))  
 st.plotly_chart(fig_strip, use_container_width=True)
@@ -281,16 +281,16 @@ df_line = df1[df1["Machine"]==mc_option]
 fig_line = px.line(df_line, x="time", y="prod_rate", width=800, height=500)
 fig_line.update_xaxes(
         title_text = "<b>Time (Minutes)</b>",
-        title_font = dict(size = 22, color='black'),
+        title_font = dict(size = 22, color='blue'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=3, linecolor='black', mirror=True)
+        showline=True, linewidth=3, linecolor='blue', mirror=True)
 fig_line.update_yaxes(
         title_text = "<b>Production Rate (Units of Part/Minute) </b>",
-        title_font = dict(size = 22, color='black'),
+        title_font = dict(size = 22, color='blue'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=4, linecolor='black', mirror=True)
+        showline=True, linewidth=4, linecolor='blue', mirror=True)
 fig_strip.update_traces(line_color='red')
 #fig_line.update_traces(line=dict(color="Maroon", width=2))
 st.plotly_chart(fig_line, use_container_width=True)
