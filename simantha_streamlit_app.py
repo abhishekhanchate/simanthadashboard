@@ -297,7 +297,7 @@ fig_line.update_yaxes(
         showline=True, linewidth=4, linecolor='black', mirror=True)
 fig_line.update_traces(line_color='orange')
 #fig_line.update_traces(line=dict(color="Maroon", width=2))
-st.plotly_chart(fig_line, use_container_width=False)
+st.plotly_chart(fig_line, use_container_width=True)
     
     
     
