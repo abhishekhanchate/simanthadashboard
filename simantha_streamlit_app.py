@@ -112,6 +112,7 @@ def user_input_features():
     data = {'Cycle Time (min)': Cycle_time,
             'Buffer Capacity (units)': Buffer_cap,
             'Maintainer Capacity (units)': Maintainer_cap}
+    pd.set_option("display.html.table_schema", True)
     features = pd.DataFrame(data, index=[0])
     return features # print(tabulate(features, headers = 'keys', tablefmt = 'fancy_grid'))
 
