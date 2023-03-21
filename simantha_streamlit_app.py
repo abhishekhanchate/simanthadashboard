@@ -265,7 +265,7 @@ fig_strip.update_xaxes(
         title_font = dict(size = 22, color='black'),
         title_standoff = 25,
         tickfont=dict(size=18),
-        showline=True, linewidth=3)#, linecolor='black', mirror=True)
+        showline=True, linewidth=3, linecolor='black', mirror=True, minor_gridcolor='grey')
 fig_strip.update_yaxes(
         title_text = "<b>Health Index</b>",
         title_font = dict(size = 22, color='black'),
