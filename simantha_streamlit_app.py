@@ -148,18 +148,18 @@ source = Source()
     
 M1 = Machine(
         name='M1', 
-        cycle_time= int(df['Cycle Time (in min)']),
+        cycle_time= int(df['Cycle Time (min)']),
         degradation_matrix=degradation_matrix,
         cbm_threshold=cbm_threshold,
         pm_distribution=pm_distribution,
         cm_distribution=cm_distribution
 )
     
-B1 = Buffer(capacity=int(df['Buffer Capacity (in units)']))
+B1 = Buffer(capacity=int(df['Buffer Capacity (units)']))
     
 M2 = Machine(
         name='M2', 
-        cycle_time=int(df['Cycle Time (in min)']),
+        cycle_time=int(df['Cycle Time (min)']),
         degradation_matrix=degradation_matrix,
         cbm_threshold=cbm_threshold,
         pm_distribution=pm_distribution,
@@ -176,7 +176,7 @@ B1.define_routing(upstream=[M1], downstream=[M2])
 M2.define_routing(upstream=[B1], downstream=[sink])
 sink.define_routing(upstream=[M2])
     
-maintainer = Maintainer(capacity=int(df['Maintainer Capacity (in units)']))
+maintainer = Maintainer(capacity=int(df['Maintainer Capacity (units)']))
     
 system = System(objects=objects, maintainer=maintainer)
     
