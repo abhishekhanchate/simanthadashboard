@@ -273,7 +273,11 @@ fig_strip.update_yaxes(
         tickfont=dict(size=18),
         showline=True, linewidth=4, linecolor='blue', mirror=True)
 fig_strip.update_traces(line_color='green')
-fig_strip.update_layout(paper_bgcolor="rgb(255,255,255)", plot_bgcolor="rgb(255,255,255)")
+fig_strip.update_layout({
+‘plot_bgcolor’: ‘rgba(0, 0, 0, 0)’,
+‘paper_bgcolor’: ‘rgba(0, 0, 0, 0)’,
+})
+#fig_strip.update_layout(paper_bgcolor="rgb(255,255,255)", plot_bgcolor="rgb(255,255,255)")
 # fig_strip.update_traces(line=dict(color="Maroon", width=2))  
 st.plotly_chart(fig_strip, use_container_width=True)
 st.write('---')
